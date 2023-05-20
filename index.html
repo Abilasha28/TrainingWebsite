@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Training Website</title>
+    <meta name="viewport" content="width =device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    
+</head>
+
+<body onload="slider()">
+    <section id="banner">
+        <div class="slider">
+            <img src="images/backn1.jpg" id="slideimg">
+        </div>
+        <div class="overlay">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/Logo1New.png">
+                </div>
+                <div class="menu-icons">
+                    <img src="images/usericon1.png" id="user">
+                    <!-- <img src="images/cart1.png" id="cart"> -->
+                    <img src="images/menu3.png" id="menu">
+                </div>
+                
+            </div>
+            <div class="content">
+                <h1>Online ElevaTe</h1>
+                <h3>Enroll in our online courses and develop your skills from anywhere in the world to endevour more!</h3>
+            <div>
+                <a href="contactForm.html"><button type="button">ENROLL NOW</button></a>
+                <!-- <button type="button" class="btn-2">ENROLL NOW</button> -->
+            </div>
+            </div>
+    </section>
+<script>
+var slideimg = document.getElementById("slideimg");
+
+var images = new Array(
+    "images/bimg1.jpg",
+    "images/bimg2.jpg",
+    "images/bimg5.jpg",
+    "images/Enroll2.jpg",
+    
+);
+
+var len = images.length;
+var i = 0;
+function slider(){
+    if(i > len-1){
+        i = 0;
+    }
+    slideimg.src = images[i];
+    i++;
+    setTimeout('slider()',3000);
+}
+    
+
+</script>
+
+</body>
+</html>
